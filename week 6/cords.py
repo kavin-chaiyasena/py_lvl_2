@@ -7,15 +7,11 @@ class RectangularCoordinates:
     def coordinates(self):
         return (self.x, self.y)
 
-    def is_x_or_y(self):
-        if self.x == 0 and self.y == 0:
-            return "พิกัดอยู่ที่จุดกำเนิด"
-        elif self.x == 0:
-            return "x-coordinate lies on the x-axis."
-        elif self.y == 0:
-            return "y-coordinate lies on the y-axis."
-        else:
-            return "Neither x nor y lies on their respective axes."
+    def is_x_or_y(self) -> bool:
+        if self.x == 0 or self.y == 0 :
+            return True
+        else :
+            return False
 
 
     def quadrant(self):
@@ -41,4 +37,3 @@ class RectangularCoordinates:
         return math.sqrt(self.c)
 
 cords = RectangularCoordinates(0,0)
-print(cords.is_x_or_y())
