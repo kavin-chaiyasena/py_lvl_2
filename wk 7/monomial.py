@@ -24,13 +24,9 @@ class Monomial:
         return len(self.k)
     
     def __str__(self):
-        # Start building the string representation with the coefficient
         monomial_str = str(self.a)
-
-        # Iterate over the exponents and add them to the string representation
         for exponent in self.k:
             monomial_str += f" * x^{exponent}"
-
         return monomial_str
 
 a = Monomial(19,3,4,5,6)
