@@ -25,9 +25,9 @@ class Monomial:
     
     def __str__(self):
         monomial_str = str(self.a)
-        for exponent in self.k:
-            monomial_str += f" * x^{exponent}"
+        for i, exponent in enumerate(self.k):
+            monomial_str += f"x_{i}^{exponent}"
         return monomial_str
 
-a = Monomial(19,3,4,5,6)
-print(a)
+a = Monomial(1,2,3,4)
+print(a.__str__())
