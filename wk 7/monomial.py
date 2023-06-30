@@ -17,6 +17,9 @@ class Monomial:
     def highest_exponent(self):
         return max(self.k.values())
     
+    def is_constant(self) -> bool :
+        return sum(self.k) == 0
+    
     def var_count(self):
         return len(self.k)
     
